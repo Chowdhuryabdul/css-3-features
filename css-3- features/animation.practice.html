@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice of animation</title>
+</head>
+<style>
+    .field{
+        border: 5px solid yellow;
+        background-color: green;
+    }
+    .ball{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+        position: relative;
+        left: 650px;
+        transition: transform 1s ease-in;
+    }
+    .bat{
+        transform-origin: top right;
+        transition: transform 0.1s ;
+    }
+    .field:hover .bat{
+        transform: rotate(-75deg);
+    }
+    .field:hover .ball{
+        transform: translate(500px);
+    }
+
+
+</style>
+<body>
+    <div class="field">
+        <img class="bat" src="images/bat.png" alt="">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
